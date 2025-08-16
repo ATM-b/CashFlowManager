@@ -1,0 +1,224 @@
+/* ----------------- BODY ----------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+
+/* ----------------- TABLE SECTION ----------------- */
+.table-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table-section th,
+.table-section td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.table-section th {
+  background: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+}
+
+.table-section .edit-btn {
+  background: #ffc107;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.table-section .edit-btn:hover {
+  background: #e0a800;
+}
+
+.table-section .delete-btn {
+  background: #dc3545;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.table-section .delete-btn:hover {
+  background: #c82333;
+}
+
+/* Export button */
+#exportPdf {
+  padding: 12px 20px;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#exportPdf:hover {
+  background: #0056b3;
+}
+
+/* ----------------- FORM SECTION ----------------- */
+.form-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+#cashForm {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#cashForm label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+#cashForm input,
+#cashForm select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  flex: 1 1 150px;
+}
+
+#cashForm button {
+  background: #28a745;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cashForm button:hover {
+  background: #218838;
+}
+
+/* ----------------- SUMMARY SECTION ----------------- */
+.summary-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.summary-section .summary {
+  flex: 1 1 150px;
+  min-width: 150px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.summary-section .summary h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.summary-section .summary p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+
+}
+
+/* ----------------- TOTALS (sleek version) ----------------- */
+.totals {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.total {
+  flex: 1 1 120px;  /* smaller and compact */
+  min-width: 120px;
+  text-align: center;
+  background: #fff;
+  padding: 15px 10px; /* less padding for sleek look */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.total:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.total h3 {
+  margin: 0 0 6px;
+  font-size: 0.95rem; /* smaller header */
+  font-weight: 500;
+  color: #555;
+}
+
+.total span {
+  font-size: 1.25rem; /* slightly smaller number */
+  font-weight: bold;
+  color: #111;
+  display: block;
+}
+
+/* Optional: different accent colors for each total */
+.total.income {
+  border-top: 4px solid #28a745; /* green */
+}
+
+.total.expense {
+  border-top: 4px solid #dc3545; /* red */
+}
+
+.total.net {
+  border-top: 4px solid #007bff; /* blue */
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 900px) {
+  .totals {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .total {
+    width: 10px;
+    padding: 12px;
+  }
+}
